@@ -1,6 +1,6 @@
 import click
 from flask.cli import FlaskGroup
-
+from flask import *
 from . import create_app_wsgi
 
 
@@ -11,3 +11,9 @@ def main():
 
 if __name__ == "__main__":  # pragma: no cover
     main()
+
+@app.route('/')
+def home():  
+    return "hello, this is our first flask website";
+    if __name__ =='__main__':  
+app.run(debug = True)
